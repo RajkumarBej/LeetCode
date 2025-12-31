@@ -1,5 +1,30 @@
 class Solution {
     public int pivotInteger(int n) {
+        if(n==1)return n;
+        int l=0,r=n,leftSum=l,rightSum=r;
+        
+        while(l<r)
+        {
+            if(leftSum<rightSum)
+            {
+                l++;
+                leftSum=leftSum+l;
+            }
+            else{
+                r--;
+                rightSum=rightSum+r;
+            }
+            if(leftSum==rightSum && l+1==r-1)return l+1;
+            
+        }
+        return -1;
+    }
+}
+
+
+/*
+class Solution {
+    public int pivotInteger(int n) {
         if(n==1)return 1;
         int leftSum=0,rightSum=0;
         for(int i=n/2;i<=n;i++)
@@ -13,4 +38,4 @@ class Solution {
         }
         return -1;
     }
-}
+} */
