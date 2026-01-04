@@ -1,7 +1,7 @@
 class Solution {
-    String count(int n){
+    public String countAndSay(int n) {
         if(n==1)return"1";
-        String temp=count(n-1),str="";
+        String temp=countAndSay(n-1),str="";
         char ch;
         int i=0;
         while(i<temp.length() && i<temp.length())
@@ -18,9 +18,5 @@ class Solution {
             //System.out.println(str);
         }
         return str;
-    }
-        
-    public String countAndSay(int n) {
-        return count(n);
     }
 }
