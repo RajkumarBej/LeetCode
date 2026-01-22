@@ -1,5 +1,5 @@
 class Solution {
-    void solve(int k,int []a,List<Integer> list,Set<List<Integer>> set){
+    void solve(int k,int []a,List<Integer> list,List<List<Integer>> set){
         set.add(new ArrayList<>(list));
         for(int i=k;i<a.length;i++)
         {
@@ -10,9 +10,9 @@ class Solution {
     }
     public List<List<Integer>> subsets(int[] nums) {
         List<Integer> list=new ArrayList<>();
-        Set<List<Integer>> set=new HashSet<>();
-        solve(0,nums,list,set);
-        List<List<Integer>> ans=new ArrayList<>(set);
+        //Set<List<Integer>> set=new HashSet<>();
+        List<List<Integer>> ans=new ArrayList<>();
+        solve(0,nums,list,ans);
         //System.out.println(set);
         //System.out.println(ans);
         return ans;
