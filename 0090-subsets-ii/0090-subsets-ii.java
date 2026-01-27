@@ -3,7 +3,7 @@ class Solution {
         List<Integer> temp=new ArrayList<>(list);
         Collections.sort(temp);
         set.add(new ArrayList<>(temp));
-        temp=new ArrayList<>();
+        temp.clear();
         for(int i=k;i<n.length;i++)
         {
             list.add(n[i]);
