@@ -17,7 +17,7 @@ class Solution {
         List<Integer> list=new ArrayList<>();
         solution(0,nums,list,set);
         List<List<Integer>> ans=new ArrayList<>(set);
-        System.out.println(ans);
+        //System.out.println(ans);
         return ans;
     }
 }
