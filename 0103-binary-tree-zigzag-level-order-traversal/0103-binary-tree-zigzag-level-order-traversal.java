@@ -28,15 +28,12 @@ class Solution {
                 if(q.peek().right!=null)q.offer(q.peek().right);
                 list.add(q.poll().val);
             }
-            if(flag){
-                ans.add(new ArrayList<>(list));
-                flag=false;
-            }
+            if(flag)ans.add(new ArrayList<>(list));
             else{
                 Collections.reverse(list);
                 ans.add(new ArrayList<>(list));
-                flag=true;
             }
+            flag=!flag;
         }
         return ans;
     }
