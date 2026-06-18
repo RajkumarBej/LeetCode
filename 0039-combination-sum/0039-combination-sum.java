@@ -6,11 +6,11 @@ class Solution {
             return;
         }
 
+        if(a[idx]<=t){
         list.add(a[idx]);
-        if(a[idx]<=t)
         combination(a,idx,t-a[idx],list,ans);
-        
         list.remove(list.size()-1);
+        }
         combination(a,idx+1,t,list,ans);
     }
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
